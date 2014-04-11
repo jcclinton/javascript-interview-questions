@@ -18,3 +18,4 @@ npm install
 grunt
 ```
 
+Feel free to make use of any additional libraries you feel are appropriate.
