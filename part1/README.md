@@ -3,22 +3,22 @@
 Write a function `collapse` in `src/index.js` which takes a structure in the following format:
 
 ```
-{
-  tag: "",
-  value: "",
-  attr: [
-    {"tag": "", value:""},{"tag":"", "value":""}
-  ]
-}
+[ { tag: "key1", value: value1 }
+, { tag: "key2", value: [ 
+      { "tag": "key3", "value": value3 },
+      { "tag": "key4", "value": value4 }
+    ] 
+  }
+]
 ```
 
 and returns the same structure with tags and associated values moved into object fields:
 
 ```
-{
-  "tag": "value",
-  "attr": {
-    "tag": "value"
+{ key1: value1,
+  key2: {
+    "key3": value3,
+    "key4": value4
   }
 }
 ```
@@ -26,14 +26,13 @@ and returns the same structure with tags and associated values moved into object
 For example, given the following input structure:
 
 ```
-{
-  "tag": "foo",
-  "value": true,
-  "attr": [
-    { "tag": "bar", value: 456 },
-    { "tag": "baz", value: "abc" }
-  ]
-}
+[ { "tag": "foo", "value": true },
+  { "tag": "bar", "value": [
+      { "tag": "baz", value: 456 },
+      { "tag": "bam", value: "abc" }
+    ] 
+  }
+]
 ```
 
 your function should return
@@ -41,9 +40,9 @@ your function should return
 ```
 {
   "foo": true,
-  "attr": {
-    "bar": 456,
-    "baz": "abc"
+  "bar": {
+    "baz": 456,
+    "bam": "abc"
   }
 }
 ```
