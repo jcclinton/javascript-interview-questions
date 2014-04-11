@@ -1,6 +1,6 @@
-module.exports = (function() {
+module.exports =  {
 
-    var attrStructure = [
+    attrStructure: [
         { "tag": "(0008,0018)", "value": "1.3.51.0.7.1193286233.9961.33088.48048.47436.15671.21980" },
         { "tag": "attr", "value": [
             { "tag": "(0008,002A)", "value": "20130318124132" }, 
@@ -29,8 +29,5 @@ module.exports = (function() {
             { "tag": "(0010,4000)", "value": "L KNEE" }
         ]
       }
-    ];
-
-    return { attrStructure: attrStructure };
-
-})();
+    ]
+};
