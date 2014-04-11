@@ -1,0 +1,13 @@
+{
+  "name": "part2",
+  "version": "0.0.0",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "browserify": "~3.41.0",
+    "nodeunit": "*",
+    "jquery": "~2.1.0",
+    "grunt": "~0.4.4",
+    "grunt-browserify": "~2.0.5",
+    "grunt-contrib-nodeunit": "~0.3.3"
+  }
+}

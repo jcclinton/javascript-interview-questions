@@ -1,23 +1,3 @@
-### Setup
-
-Make sure you have an installation of `grunt`: 
-
-```
-npm install -g grunt-cli
-```
-
-Use `npm` to install local dependencies:
-
-```
-npm install
-```
-
-Use `bower` to install nodeunit: 
-
-```
-bower update
-```
-
 ### Question 1
 
 Write a function `collapse` in `src/index.js` which takes a structure in the following format:
